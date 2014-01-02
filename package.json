@@ -1,13 +1,18 @@
 {
-  "name": "application-name",
+  "name": "snapshottr.web",
   "version": "0.0.1",
-  "private": true,
+  "description": "a web front end for snapshottr",
   "scripts": {
     "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jasonHooten/snapshottr.web.git"
   },
   "dependencies": {
     "express": "3.4.7",
     "ejs": "*",
-    "stylus": "*"
+    "stylus": "*",
+    "underscore": "~1.5.2"
   }
 }
