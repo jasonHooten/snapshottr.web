@@ -1,39 +1,53 @@
-
 /**
  * Module dependencies.
  */
 
-var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
-var http = require('http');
-var path = require('path');
-
-var app = express();
+var express = require('express'),
+        http = require('http'), 
+        path = require('path'),
+        
+        config = require('./config')(),
+        app = express(),
+        MongoClient = require('mongodb').MongoClient,
+    
+        index = require('./routes/index')
+        ;
 
 // all environments
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
+// app.set('port', process.env.PORT || 3000);
+app.set('views', __dirname + '/templates');
 app.set('view engine', 'ejs');
 app.use(express.favicon());
 app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(express.cookieParser('snapshottr-secret'));
+app.use(express.cookieParser('snapshottr-site'));
 app.use(express.session());
 app.use(app.router);
-app.use(require('stylus').middleware(path.join(__dirname, 'public')));
+app.use(require('less-middleware')({ src: __dirname + '/public' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+          app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
-app.get('/users', user.list);
+MongoClient.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/snapshottr', function(err, db) {
+        if(err) {
+                console.log('Sorry, there is no mongo db server running.');
+        } else {
+                var attachDB = function(req, res, next) {
+                        req.db = db;
+                        next();
+                };
+                
+                app.get('/', index);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+                http.createServer(app).listen(config.port, function() {
+                          console.log(
+                                  'Successfully connected to ' + 'mongodb://' + config.mongo.host + ':' + config.mongo.port,
+                                  '\nExpress server listening on port ' + config.port
+                          );
+                });
+        }
 });
