@@ -14,5 +14,9 @@
     "ejs": "*",
     "stylus": "*",
     "underscore": "~1.5.2"
+  },
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "mocha": "~1.16.2"
   }
 }
