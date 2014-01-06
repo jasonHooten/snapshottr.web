@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{bcb672b7-1702-49db-8718-208b24b66d8b}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <StartupFile>app.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -19,14 +19,14 @@
   <ItemGroup>
     <Compile Include="api\controllers\MainController.js" />
     <Compile Include="api\models\user.js" />
-    <Compile Include="assets\js\app.js" />
-    <Compile Include="assets\js\sails.io.js" />
-    <Compile Include="assets\js\socket.io.js" />
+    <Compile Include="assets\linker\js\app.js" />
+    <Compile Include="assets\linker\js\sails.io.js" />
+    <Compile Include="assets\linker\js\socket.io.js" />
+    <Compile Include="assets\linker\templates\_login.html" />
     <Compile Include="config\404.js" />
     <Compile Include="config\500.js" />
     <Compile Include="config\adapters.js" />
     <Compile Include="config\application.js" />
-    <Compile Include="config\assets.js" />
     <Compile Include="config\bootstrap.js" />
     <Compile Include="config\controllers.js" />
     <Compile Include="config\csrf.js" />
@@ -46,9 +46,12 @@
     <Content Include="api\services\.gitkeep" />
     <Content Include="assets\favicon.ico" />
     <Content Include="assets\images\.gitkeep" />
-    <Content Include="assets\js\.gitkeep" />
+    <Content Include="assets\linker\js\.gitkeep" />
+    <Content Include="assets\linker\styles\normalize.css" />
+    <Content Include="assets\linker\styles\style.css" />
+    <Content Include="assets\linker\templates\.gitkeep" />
     <Content Include="assets\robots.txt" />
-    <Content Include="assets\styles\.gitkeep" />
+    <Content Include="assets\linker\styles\.gitkeep" />
     <Content Include="config\locales\en.json" />
     <Content Include="config\locales\es.json" />
     <Content Include="config\locales\_README.md" />
@@ -70,8 +73,10 @@
     <Folder Include="api\services\" />
     <Folder Include="assets\" />
     <Folder Include="assets\images\" />
-    <Folder Include="assets\js\" />
-    <Folder Include="assets\styles\" />
+    <Folder Include="assets\linker\js\" />
+    <Folder Include="assets\linker\" />
+    <Folder Include="assets\linker\templates\" />
+    <Folder Include="assets\linker\styles\" />
     <Folder Include="config\" />
     <Folder Include="config\locales\" />
     <Folder Include="views\" />
