@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%- title %></title>
+
+        <!-- Viewport mobile tag for sensible mobile support -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <!--STYLES-->
+        <link rel="stylesheet" href="/linker/styles/normalize.css">
+        <link rel="stylesheet" href="/linker/styles/style.css">
+        <!--STYLES END-->
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">    
+        
+    </head>
+
+    <body>
+        <%- body %>
+        
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>        
+       <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>    
+       <script src="//cdnjs.cloudflare.com/ajax/libs/ember.js/1.2.0/ember.min.js"></script>      
+    
+        <!--SCRIPTS-->
+        <script src="/linker/js/socket.io.js"></script>
+        <script src="/linker/js/sails.io.js"></script>
+        <script src="/linker/js/app.js"></script>
+        <!--SCRIPTS END-->
+
+        <!--TEMPLATES-->
+        <script type="text/javascript" src="/jst.js"></script>
+        <!--TEMPLATES END-->
+    </body>
+</html>

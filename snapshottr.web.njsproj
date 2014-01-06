@@ -17,30 +17,65 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
-    <Compile Include="config\index.js" />
-    <Compile Include="models\snap.js" />
-    <Compile Include="test\test.base.model.js" />
-    <Compile Include="test\test.config.js" />
-    <Compile Include="test\test.mongo.js" />
+    <Compile Include="api\controllers\MainController.js" />
+    <Compile Include="api\models\user.js" />
+    <Compile Include="assets\js\app.js" />
+    <Compile Include="assets\js\sails.io.js" />
+    <Compile Include="assets\js\socket.io.js" />
+    <Compile Include="config\404.js" />
+    <Compile Include="config\500.js" />
+    <Compile Include="config\adapters.js" />
+    <Compile Include="config\application.js" />
+    <Compile Include="config\assets.js" />
+    <Compile Include="config\bootstrap.js" />
+    <Compile Include="config\controllers.js" />
+    <Compile Include="config\csrf.js" />
+    <Compile Include="config\i18n.js" />
+    <Compile Include="config\local.js" />
+    <Compile Include="config\log.js" />
+    <Compile Include="config\policies.js" />
+    <Compile Include="config\routes.js" />
+    <Compile Include="config\session.js" />
+    <Compile Include="config\sockets.js" />
+    <Compile Include="config\views.js" />
+    <Compile Include="Gruntfile.js" />
     <Content Include=".gitignore" />
+    <Content Include="api\adapters\.gitkeep" />
+    <Content Include="api\controllers\.gitkeep" />
+    <Content Include="api\models\.gitkeep" />
+    <Content Include="api\services\.gitkeep" />
+    <Content Include="assets\favicon.ico" />
+    <Content Include="assets\images\.gitkeep" />
+    <Content Include="assets\js\.gitkeep" />
+    <Content Include="assets\robots.txt" />
+    <Content Include="assets\styles\.gitkeep" />
+    <Content Include="config\locales\en.json" />
+    <Content Include="config\locales\es.json" />
+    <Content Include="config\locales\_README.md" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Compile Include="api\policies\authenticated.js" />
     <Compile Include="app.js" />
-    <Compile Include="models\base.js" />
-    <Compile Include="routes\index.js" />
-    <Compile Include="routes\user.js" />
-    <Content Include="test\mocha.opts" />
-    <Content Include="views\index.ejs" />
-    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="views\404.ejs" />
+    <Content Include="views\500.ejs" />
+    <Content Include="views\layout.ejs" />
+    <Content Include="views\main\index.ejs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="api\" />
+    <Folder Include="api\adapters\" />
+    <Folder Include="api\controllers\" />
+    <Folder Include="api\models\" />
+    <Folder Include="api\policies\" />
+    <Folder Include="api\services\" />
+    <Folder Include="assets\" />
+    <Folder Include="assets\images\" />
+    <Folder Include="assets\js\" />
+    <Folder Include="assets\styles\" />
     <Folder Include="config\" />
-    <Folder Include="models\" />
-    <Folder Include="public\" />
-    <Folder Include="public\stylesheets" />
-    <Folder Include="routes" />
-    <Folder Include="test\" />
-    <Folder Include="views" />
+    <Folder Include="config\locales\" />
+    <Folder Include="views\" />
+    <Folder Include="views\main\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
