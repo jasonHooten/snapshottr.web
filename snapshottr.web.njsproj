@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{bcb672b7-1702-49db-8718-208b24b66d8b}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <StartupFile>app.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -17,8 +17,8 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
-    <Compile Include="api\controllers\MainController.js" />
-    <Compile Include="api\models\user.js" />
+    <Compile Include="api\controllers\UserController.js" />
+    <Compile Include="api\models\User.js" />
     <Compile Include="assets\linker\js\app.js" />
     <Compile Include="assets\linker\js\sails.io.js" />
     <Compile Include="assets\linker\js\socket.io.js" />
@@ -63,6 +63,7 @@
     <Content Include="views\500.ejs" />
     <Content Include="views\layout.ejs" />
     <Content Include="views\main\index.ejs" />
+    <Content Include="views\user\new.ejs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="api\" />
@@ -81,6 +82,7 @@
     <Folder Include="config\locales\" />
     <Folder Include="views\" />
     <Folder Include="views\main\" />
+    <Folder Include="views\user\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
