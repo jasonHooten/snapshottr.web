@@ -17,6 +17,8 @@ lib-cov
 *.pid
 *.gz
 
+.tmp/
+
 pids
 logs
 results
