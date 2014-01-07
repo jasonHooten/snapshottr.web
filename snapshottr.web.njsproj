@@ -17,7 +17,9 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="api\controllers\SnapController.js" />
     <Compile Include="api\controllers\UserController.js" />
+    <Compile Include="api\models\Snap.js" />
     <Compile Include="api\models\User.js" />
     <Compile Include="assets\linker\js\app.js" />
     <Compile Include="assets\linker\js\sails.io.js" />
