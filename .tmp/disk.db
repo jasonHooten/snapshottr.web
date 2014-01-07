@@ -4,10 +4,14 @@
   },
   "schema": {
     "user": {
-      "username": {
+      "name": {
         "type": "string"
       },
-      "password": {
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "encryptedPassword": {
         "type": "string"
       },
       "id": {

@@ -1,12 +1,31 @@
-﻿/*---------------------
-        :: Users
-        -> model
----------------------*/
+/**
+ * User
+ *
+ * @module      :: Model
+ * @description :: A short summary of how this model works and what it represents.
+ *
+ */
+
 module.exports = {
 
-        attributes        : {
-                username: 'STRING',
-                password: 'STRING'
-        }
+  attributes: {
+  	
+      name: {
+            type: 'string',
+            required: true
+          },
+
+      email: {
+            type: 'string',
+            email: true,
+            required: true,
+            unique: true
+          },
+
+      encryptedPassword: {
+            type: 'string'
+          },
+    
+  }
 
 };
