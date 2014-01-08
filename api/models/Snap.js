@@ -9,11 +9,22 @@
 module.exports = {
 
   attributes: {
-  	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
+
+    userId: {
+        type: 'string',
+        required: true
+    },
+
+  	html: {
+        type: 'string',
+        required: true
+    },
     
+
+    like: {
+        type: 'integer',
+        required: true
+    },
   }
 
 };

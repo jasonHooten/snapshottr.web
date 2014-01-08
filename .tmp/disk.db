@@ -1,6 +1,7 @@
 {
   "data": {
-    "user": []
+    "user": [],
+    "snap": []
   },
   "schema": {
     "user": {
@@ -29,9 +30,36 @@
         "type": "datetime",
         "default": "NOW"
       }
+    },
+    "snap": {
+      "userId": {
+        "type": "string"
+      },
+      "html": {
+        "type": "string"
+      },
+      "like": {
+        "type": "integer"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "defaultsTo": "AUTO_INCREMENT",
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime",
+        "default": "NOW"
+      },
+      "updatedAt": {
+        "type": "datetime",
+        "default": "NOW"
+      }
     }
   },
   "counters": {
-    "user": {}
+    "user": {},
+    "snap": {}
   }
 }

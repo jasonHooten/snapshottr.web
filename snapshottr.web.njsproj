@@ -21,6 +21,7 @@
     <Compile Include="api\controllers\UserController.js" />
     <Compile Include="api\models\Snap.js" />
     <Compile Include="api\models\User.js" />
+    <Compile Include="api\services\webPageGrabber.js" />
     <Compile Include="assets\linker\js\app.js" />
     <Compile Include="assets\linker\js\sails.io.js" />
     <Compile Include="assets\linker\js\socket.io.js" />
@@ -46,8 +47,8 @@
     <Compile Include="external\snapshottr\lib\sanitize.js" />
     <Compile Include="external\snapshottr\lib\snapshottr.js" />
     <Compile Include="external\snapshottr\lib\utils.js" />
-    <Compile Include="external\snapshottr\test\test.snapshottr.js" />
     <Compile Include="Gruntfile.js" />
+    <Compile Include="test\test.webPageGrabber.js" />
     <Content Include=".gitignore" />
     <Content Include="api\adapters\.gitkeep" />
     <Content Include="api\controllers\.gitkeep" />
@@ -70,9 +71,6 @@
     <Content Include="external\snapshottr\package.json" />
     <Content Include="external\snapshottr\README.md" />
     <Content Include="external\snapshottr\snapshottr.njsproj" />
-    <Content Include="external\snapshottr\test\importTest.html" />
-    <Content Include="external\snapshottr\test\mocha.opts" />
-    <Content Include="external\snapshottr\test\test1.html" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Compile Include="api\policies\authenticated.js" />
@@ -80,6 +78,7 @@
     <Content Include="views\404.ejs" />
     <Content Include="views\500.ejs" />
     <Content Include="views\layout.ejs" />
+    <Content Include="views\main\index.ejs" />
     <Content Include="views\user\new.ejs" />
   </ItemGroup>
   <ItemGroup>
@@ -101,8 +100,9 @@
     <Folder Include="external\snapshottr\" />
     <Folder Include="external\snapshottr\lib\" />
     <Folder Include="external\snapshottr\lib\api\" />
-    <Folder Include="external\snapshottr\test\" />
+    <Folder Include="test\" />
     <Folder Include="views\" />
+    <Folder Include="views\main\" />
     <Folder Include="views\user\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
