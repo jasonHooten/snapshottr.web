@@ -49,6 +49,8 @@
     <Compile Include="external\snapshottr\lib\utils.js" />
     <Compile Include="Gruntfile.js" />
     <Compile Include="test\test.webPageGrabber.js" />
+    <Compile Include="views\_header.ejs" />
+    <Compile Include="views\main\index.ejs" />
     <Content Include=".gitignore" />
     <Content Include="api\adapters\.gitkeep" />
     <Content Include="api\controllers\.gitkeep" />
@@ -57,7 +59,7 @@
     <Content Include="assets\favicon.ico" />
     <Content Include="assets\images\.gitkeep" />
     <Content Include="assets\linker\js\.gitkeep" />
-    <Content Include="assets\linker\styles\normalize.css" />
+    <Content Include="assets\linker\styles\bootstrap.css" />
     <Content Include="assets\linker\styles\style.css" />
     <Content Include="assets\linker\templates\.gitkeep" />
     <Content Include="assets\robots.txt" />
@@ -78,7 +80,6 @@
     <Content Include="views\404.ejs" />
     <Content Include="views\500.ejs" />
     <Content Include="views\layout.ejs" />
-    <Content Include="views\main\index.ejs" />
     <Content Include="views\user\new.ejs" />
   </ItemGroup>
   <ItemGroup>
