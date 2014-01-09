@@ -1,7 +1,7 @@
 ﻿var request = require('request');
 
 // @param: options.url     string the url to call
-exports.webPageGrabber = function(options, callback) {
+exports.Grab = function(options, callback) {
     var returnObject = {
         html: 'test',
         css: []

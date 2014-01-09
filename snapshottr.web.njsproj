@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{bcb672b7-1702-49db-8718-208b24b66d8b}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <StartupFile>app.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -21,7 +21,8 @@
     <Compile Include="api\controllers\UserController.js" />
     <Compile Include="api\models\Snap.js" />
     <Compile Include="api\models\User.js" />
-    <Compile Include="api\services\webPageGrabber.js" />
+    <Compile Include="api\services\SnapShottrService.js" />
+    <Compile Include="api\services\WebPageService.js" />
     <Compile Include="assets\linker\js\app.js" />
     <Compile Include="assets\linker\js\sails.io.js" />
     <Compile Include="assets\linker\js\socket.io.js" />
@@ -57,6 +58,10 @@
     <Content Include="api\models\.gitkeep" />
     <Content Include="api\services\.gitkeep" />
     <Content Include="assets\favicon.ico" />
+    <Content Include="assets\linker\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\linker\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\linker\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\linker\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assets\images\.gitkeep" />
     <Content Include="assets\linker\js\.gitkeep" />
     <Content Include="assets\linker\styles\bootstrap.css" />
@@ -90,6 +95,7 @@
     <Folder Include="api\policies\" />
     <Folder Include="api\services\" />
     <Folder Include="assets\" />
+    <Folder Include="assets\linker\fonts\" />
     <Folder Include="assets\images\" />
     <Folder Include="assets\linker\js\" />
     <Folder Include="assets\linker\" />
