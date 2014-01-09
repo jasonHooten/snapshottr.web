@@ -1,10 +1,10 @@
-﻿var webPageGrabber = require("./../api/services/webPageGrabber").webPageGrabber,
+﻿var grab = require("./../api/services/webPageService").Grab,
     expect = require("chai").expect;
 
 
-describe('{webPageGrabber}', function() {
+describe('{webPageService.Grab}', function() {
     it('should grab the html from a single url', function() {
-        webPageGrabber('www.google.com', function (data) {
+        grab('www.google.com', function (data) {
             
             expect(data).to.exist;
             expect(data).to.have.ownProperty('html');
@@ -15,7 +15,7 @@ describe('{webPageGrabber}', function() {
     });
     
     it('should grab the html from a url in options', function() {
-        webPageGrabber({url: 'www.google.com'}, function (data) {
+        grab({url: 'www.google.com'}, function (data) {
             
             expect(data).to.exist;
             expect(data).to.have.ownProperty('html');

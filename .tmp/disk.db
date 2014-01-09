@@ -1,7 +1,48 @@
 {
   "data": {
     "user": [],
-    "snap": []
+    "snap": [
+      {
+        "html": "[object Object]",
+        "like": 0,
+        "userId": "1",
+        "createdAt": "2014-01-09T22:09:33.337Z",
+        "updatedAt": "2014-01-09T22:09:33.337Z",
+        "id": 1
+      },
+      {
+        "html": "[object Object]",
+        "like": 0,
+        "userId": "1",
+        "createdAt": "2014-01-09T22:11:04.070Z",
+        "updatedAt": "2014-01-09T22:11:04.070Z",
+        "id": 2
+      },
+      {
+        "html": "[object Object]",
+        "like": 0,
+        "userId": "1",
+        "createdAt": "2014-01-09T22:11:25.433Z",
+        "updatedAt": "2014-01-09T22:11:25.433Z",
+        "id": 3
+      },
+      {
+        "html": "[object Object]",
+        "like": 0,
+        "userId": "1",
+        "createdAt": "2014-01-09T22:11:43.086Z",
+        "updatedAt": "2014-01-09T22:11:43.086Z",
+        "id": 4
+      },
+      {
+        "html": "[object Object]",
+        "like": 0,
+        "userId": "1",
+        "createdAt": "2014-01-09T22:12:49.148Z",
+        "updatedAt": "2014-01-09T22:12:49.148Z",
+        "id": 5
+      }
+    ]
   },
   "schema": {
     "user": {
@@ -60,6 +101,8 @@
   },
   "counters": {
     "user": {},
-    "snap": {}
+    "snap": {
+      "id": 5
+    }
   }
 }
