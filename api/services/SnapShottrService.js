@@ -3,6 +3,6 @@
 // @param: options.snap     string the url to call
 exports.Snap = function(html, callback) {
     var snap = new snapshottr;
-    snap.load(html);
+    snap.load(html.html);
     callback(snap);
 };
