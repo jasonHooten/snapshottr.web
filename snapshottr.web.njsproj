@@ -25,6 +25,7 @@
     <Compile Include="api\services\WebPageService.js" />
     <Compile Include="assets\linker\js\app.js" />
     <Compile Include="assets\linker\js\sails.io.js" />
+    <Compile Include="assets\linker\js\snapController.js" />
     <Compile Include="assets\linker\js\socket.io.js" />
     <Compile Include="assets\linker\templates\_login.html" />
     <Compile Include="config\404.js" />
@@ -49,7 +50,8 @@
     <Compile Include="external\snapshottr\lib\snapshottr.js" />
     <Compile Include="external\snapshottr\lib\utils.js" />
     <Compile Include="Gruntfile.js" />
-    <Compile Include="test\test.webPageGrabber.js" />
+    <Compile Include="test\test.SnapShottrService.js" />
+    <Compile Include="test\test.WebPageService.js" />
     <Compile Include="views\_header.ejs" />
     <Compile Include="views\main\index.ejs" />
     <Content Include=".gitignore" />
@@ -58,6 +60,8 @@
     <Content Include="api\models\.gitkeep" />
     <Content Include="api\services\.gitkeep" />
     <Content Include="assets\favicon.ico" />
+    <Content Include="assets\images\Camera-icon.png" />
+    <Content Include="assets\images\facebook_like_button_big.jpg" />
     <Content Include="assets\linker\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="assets\linker\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="assets\linker\fonts\glyphicons-halflings-regular.ttf" />
@@ -85,6 +89,7 @@
     <Content Include="views\404.ejs" />
     <Content Include="views\500.ejs" />
     <Content Include="views\layout.ejs" />
+    <Content Include="views\snap\review.ejs" />
     <Content Include="views\user\new.ejs" />
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +115,7 @@
     <Folder Include="test\" />
     <Folder Include="views\" />
     <Folder Include="views\main\" />
+    <Folder Include="views\snap\" />
     <Folder Include="views\user\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
