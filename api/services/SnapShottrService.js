@@ -4,5 +4,8 @@
 exports.Snap = function(html, callback) {
     var snap = new snapshottr;
     snap.load(html.html);
-    callback(snap);
+
+    WebPageService.AppendCssFiles(snap, function(snapWithCss) {
+        callback(snapWithCss);
+    });
 };

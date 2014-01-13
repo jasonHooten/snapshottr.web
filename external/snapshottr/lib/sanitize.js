@@ -12,7 +12,7 @@ var sanitize = exports.sanitize = function($){
 var blackListTags = [
   "script",
   "iframe",
-  "form",
+ // "form",
   "object",
   "embed",
   "link",                

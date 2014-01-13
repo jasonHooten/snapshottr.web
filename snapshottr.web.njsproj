@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{bcb672b7-1702-49db-8718-208b24b66d8b}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <StartupFile>app.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -13,12 +13,20 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>snapshottr.web</Name>
+    <NodeExePath />
+    <NodeExeArguments>sails lift</NodeExeArguments>
+    <ScriptArguments />
+    <NodejsPort />
+    <StartWebBrowser>True</StartWebBrowser>
+    <LaunchUrl />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="api\controllers\HtmlController.js" />
     <Compile Include="api\controllers\SnapController.js" />
     <Compile Include="api\controllers\UserController.js" />
+    <Compile Include="api\models\Html.js" />
     <Compile Include="api\models\Snap.js" />
     <Compile Include="api\models\User.js" />
     <Compile Include="api\services\SnapShottrService.js" />

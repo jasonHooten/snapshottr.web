@@ -14,20 +14,26 @@ module.exports = {
             if (!data) return res.send("That webpage has no html!", 404);
                 
             SnapShottrService.Snap(data, function(snap) {
-                var html = snap.view();
-                Snap.create({
-                    html: html,
-                    url: url,
-                    like: 0,
-                    userId: 1
-                }).done(function(err, snapModel) {
-                    if (err) return res.send(err, 404);
-                    return res.redirect('/snap/review?id=' + snapModel.id);
-                }); //create
-                    
+                    var html = snap.view();
+                    Html.create({
+                        body: html
+                        
+                    }).done(function (errHtml, htmlModel) {
+                        if (errHtml) return res.send(errHtml, 404);
+                        Snap.create({
+                            htmlId: htmlModel.id,
+                            url: url,
+                            like: 0,
+                            userId: 1
+                        }).done(function(errSnap, snapModel) {
+                            if (errSnap) return res.send(errSnap, 404);
+                            return res.redirect('/snap/review?id=' + snapModel.id);
+                        });    
+                    });
             }); //snap
         }); //grab 
     },//fromUrl
+    
 
     review: function(req, res) {
         Snap.find(req.param('id')).exec(function(err, snapModel) {
@@ -36,16 +42,6 @@ module.exports = {
             if (!snapModel) return res.send("No other snpa with that id exists!", 404);
 
             return res.view({ id: snapModel.id, like: snapModel.like, url: snapModel.url });
-        });
-    },
-    
-    viewHtml: function(req, res) {
-        Snap.find(req.param('id')).exec(function(err, snapModel) {
-            snapModel = snapModel[0];
-            if (err) return res.send(err,500);
-            if (!snapModel) return res.send("No other snpa with that id exists!", 404);
-
-            return res.send(snapModel.html);
         });
     },
 

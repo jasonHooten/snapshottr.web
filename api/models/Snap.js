@@ -15,7 +15,7 @@ module.exports = {
         required: true
     },
 
-  	html: {
+  	htmlId: {
         type: 'string',
         required: true
     },
