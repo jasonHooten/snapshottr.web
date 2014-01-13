@@ -17,6 +17,7 @@ module.exports = {
                 var html = snap.view();
                 Snap.create({
                     html: html,
+                    url: url,
                     like: 0,
                     userId: 1
                 }).done(function(err, snapModel) {
@@ -34,7 +35,7 @@ module.exports = {
             if (err) return res.send(err,500);
             if (!snapModel) return res.send("No other snpa with that id exists!", 404);
 
-            return res.view({ id: snapModel.id, like: snapModel.like });
+            return res.view({ id: snapModel.id, like: snapModel.like, url: snapModel.url });
         });
     },
     

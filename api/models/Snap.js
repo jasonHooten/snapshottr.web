@@ -20,6 +20,10 @@ module.exports = {
         required: true
     },
     
+    url: {
+        type: 'string',
+        required: true
+    },
 
     like: {
         type: 'integer',
