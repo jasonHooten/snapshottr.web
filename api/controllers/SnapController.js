@@ -14,9 +14,8 @@ module.exports = {
             if (!data) return res.send("That webpage has no html!", 404);
                 
             SnapShottrService.Snap(data, function(snap) {
-                    var html = snap.view();
                     Html.create({
-                        body: html
+                        body: snap.view()
                         
                     }).done(function (errHtml, htmlModel) {
                         if (errHtml) return res.send(errHtml, 404);
@@ -25,6 +24,7 @@ module.exports = {
                             url: url,
                             like: 0,
                             userId: 1
+                            
                         }).done(function(errSnap, snapModel) {
                             if (errSnap) return res.send(errSnap, 404);
                             return res.redirect('/snap/review?id=' + snapModel.id);

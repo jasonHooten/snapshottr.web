@@ -2,7 +2,7 @@
 
 <footer style="max-height: 100px; background-color: #dfdfdf;">
     <div class="well">
-        
+        <button  class="btn btn-info btn-sm">Likes(<%= like %>)</button>
         <div>
             <label>Url:</label> <strong><%= url %></strong>
         </div>
@@ -12,11 +12,8 @@
 <script type="text/x-handlebars" id="likes">
 <div class='likes'>
     <div class="controls">
-        {{#if model.like > 0}}
-        <button {{action 'like' model}} class="btn btn-info btn-sm">Likes({{ model.like }})</button>
-        {{else}}
-        <button {{action 'like' model}} class="btn btn-info btn-sm">Be the first to Like this.</button>
-        {{/if}}
+        
+        <button  class="btn btn-info btn-sm">Be the first to Like this.</button>
     </div>
 </div>
 </script>
@@ -24,12 +21,10 @@
 <script type="text/javascript">
     function calcHeight() {
         //find the height of the internal page
-        var the_height =
-            document.getElementById('html-source').contentWindow.
-                document.body.scrollHeight;
+        var the_height = window.innerHeight;
 
         //change the height of the iframe
-        document.getElementById('html-source').height = the_height - 120 - 23;
+        document.getElementById('html-source').height = the_height - 120 - 40;
     }
 </script>
 
