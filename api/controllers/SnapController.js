@@ -28,7 +28,7 @@ module.exports = {
                         }).done(function(errSnap, snapModel) {
                             if (errSnap) return res.send(errSnap, 404);
                             return res.redirect('/snap/review?id=' + snapModel.id);
-                        });    
+                        });   
                     });
             }); //snap
         }); //grab 

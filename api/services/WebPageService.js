@@ -1,5 +1,5 @@
-﻿var request = require('request')
-    , _ = require('underscore');
+﻿var request = require('request'),
+    _ = require('underscore');
 
 // @param: options.url     string the url to call
 exports.Grab = function(options, callback) {
@@ -20,13 +20,10 @@ exports.Grab = function(options, callback) {
 // @param: options.url     string the url to call
 exports.AppendCssFiles = function(snap, callback) {
     
-    
     var urls = snap.getExternalCss(),
         cssFiles = [];
 
     if(urls && urls.length > 0) {
-        console.log("in snap service: urls.length = " + urls.length);
-        
         var cb = _.after(urls.length, function() {
             if(cssFiles.length > 0) snap.appendCss(cssFiles);
             callback(snap);
