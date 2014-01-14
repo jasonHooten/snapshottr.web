@@ -1,4 +1,4 @@
-﻿var snapshottr = require('./../../external/snapshottr');
+﻿var snapshottr = require('snapshottr');
 
 // @param: options.snap     string the url to call
 exports.Snap = function(html, callback) {

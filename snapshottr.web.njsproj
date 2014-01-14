@@ -51,12 +51,6 @@
     <Compile Include="config\session.js" />
     <Compile Include="config\sockets.js" />
     <Compile Include="config\views.js" />
-    <Compile Include="external\snapshottr\app.js" />
-    <Compile Include="external\snapshottr\lib\api\css.js" />
-    <Compile Include="external\snapshottr\lib\api\file.js" />
-    <Compile Include="external\snapshottr\lib\sanitize.js" />
-    <Compile Include="external\snapshottr\lib\snapshottr.js" />
-    <Compile Include="external\snapshottr\lib\utils.js" />
     <Compile Include="Gruntfile.js" />
     <Compile Include="test\test.SnapShottrService.js" />
     <Compile Include="test\test.WebPageService.js" />
@@ -84,12 +78,6 @@
     <Content Include="config\locales\en.json" />
     <Content Include="config\locales\es.json" />
     <Content Include="config\locales\_README.md" />
-    <Content Include="external\snapshottr\.gitattributes" />
-    <Content Include="external\snapshottr\.gitignore" />
-    <Content Include="external\snapshottr\Makefile" />
-    <Content Include="external\snapshottr\package.json" />
-    <Content Include="external\snapshottr\README.md" />
-    <Content Include="external\snapshottr\snapshottr.njsproj" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Compile Include="api\policies\authenticated.js" />
@@ -116,10 +104,6 @@
     <Folder Include="assets\linker\styles\" />
     <Folder Include="config\" />
     <Folder Include="config\locales\" />
-    <Folder Include="external\" />
-    <Folder Include="external\snapshottr\" />
-    <Folder Include="external\snapshottr\lib\" />
-    <Folder Include="external\snapshottr\lib\api\" />
     <Folder Include="test\" />
     <Folder Include="views\" />
     <Folder Include="views\main\" />
